@@ -113,6 +113,22 @@
                 |  - Рейтинг
 ---
 
+### Легко создать папки в проекте 
+    mkdir static
+    mkdir static\users
+    mkdir static\users\css
+    mkdir static\users\js
+    mkdir static\users\images
+
+    mkdir templates/
+    mkdir templates/users/
+    mkdir templates/users/register.html
+    mkdir templates/users/login.html
+    mkdir templates/users/profile.html
+    mkdir templates/users/dashboard.html
+
+# Добавить в requirements.txt библиотеки проекта:
+    pip freeze > requirements.txt
 
 ### Примерная архитектура проекта 
     
@@ -177,6 +193,7 @@
     0.0.2 - Настроил news_portal - главное прилодение
     0.0.3 - Cоздал приложение users и частично прописал атрибуты сущностей в README.md
     0.0.4 - Прописал модели в news_portal/users/models.py и прописал примерную архитектуру проекта в README.md
+    0.0.5 - Настроил news_portal и установил Pillow - это библиотека для работы с изображениями в Python и создал папки в news_portal/users : static , static\users , static\users\css , static\users\js , static\users\images, добавил все беблиотеки в requirements.txt, создал и пременил миграции 
 
 
 

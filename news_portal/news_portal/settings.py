@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sites', # для site в файле prodject/prodject/urls.py
     'django.contrib.flatpages', # для встроенного приложения flatpages применения стилей
 
+    'users',    # Приложение для пользователей
+    #'blog',     # Приложение для контента
+
 ]
 
 MIDDLEWARE = [
@@ -124,16 +127,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+AUTH_USER_MODEL = 'users.User'
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+# Это настройка в Django, которая говорит:
+# Ищи статические файлы (например, CSS, JavaScript, картинки)
+# в папке static, которая находится внутри вашего проекта.
+# BASE_DIR — это папка, где находится ваш проект.
+# BASE_DIR / 'static' — это путь к папке static внутри вашего проекта.
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [ BASE_DIR / 'static']
-    # Это настройка в Django, которая говорит:
-    # Ищи статические файлы (например, CSS, JavaScript, картинки)
-    # в папке static, которая находится внутри вашего проекта.
-    # BASE_DIR — это папка, где находится ваш проект.
-    # BASE_DIR / 'static' — это путь к папке static внутри вашего проекта.
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
