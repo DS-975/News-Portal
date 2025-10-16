@@ -113,23 +113,17 @@
                 |  - Рейтинг
 ---
 
-### Легко создать папки в проекте 
+### Создай основные папки и файлы
+    mkdir templates
+    type nul > templates\default.html
+
     mkdir static
-    mkdir static\users
-    mkdir static\users\css
-    mkdir static\users\js
-    mkdir static\users\images
+    mkdir static\css
+    type nul > static\css\default.css
 
-    mkdir templates/
-    mkdir templates/users/
-    mkdir templates/users/register.html
-    mkdir templates/users/login.html
-    mkdir templates/users/profile.html
-    mkdir templates/users/dashboard.html
+    mkdir static\js
+    type nul > static\js\default.js
 
-
-### Создай основные папки
-    mkdir static
     mkdir media
     mkdir media\avatars
     mkdir media\posts
@@ -243,6 +237,12 @@
             ├── js/
             └── images/
 
+- - -
+
+### Структура проекта одной командой (пути папок и файлов)
+    tree news_portal /F > news_portal_structure.txt
+
+- - -
 
 #### version :
     0.0.1 - Создал Gjango проект
@@ -251,7 +251,7 @@
     0.0.4 - Прописал модели в news_portal/users/models.py и прописал примерную архитектуру проекта в README.md
     0.0.5 - Настроил news_portal и установил Pillow - это библиотека для работы с изображениями в Python и создал папки в news_portal/users : static , static\users , static\users\css , static\users\js , static\users\images, добавил все беблиотеки в requirements.txt, создал и пременил миграции 
     0.0.6 - Создал прилодение blog, создал папки templates, static и файлы urls.py и forms.py в blog и users, так же прописал быстрый способ по создание папок и файлов в них в README.md
-
+    0.0.7 - Добавил в news_portal - static и создал default.css и default.html главной страницы, нашёл команду для сохранения архетектуры проета прописал её в README, и также сохранил текущюю архетектуру проекта в файле news_portal_structure.txt 
 
 
 

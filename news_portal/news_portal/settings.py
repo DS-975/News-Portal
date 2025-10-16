@@ -130,24 +130,16 @@ USE_TZ = True
 AUTH_USER_MODEL = 'users.User'
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-# Это настройка в Django, которая говорит:
-# Ищи статические файлы (например, CSS, JavaScript, картинки)
-# в папке static, которая находится внутри вашего проекта.
-# BASE_DIR — это папка, где находится ваш проект.
-# BASE_DIR / 'static' — это путь к папке static внутри вашего проекта.
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
 
 def ensure_dir(directory):
     if not os.path.exists(directory):
