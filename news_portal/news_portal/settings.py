@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages', # для встроенного приложения flatpages применения стилей
 
     'users',    # Приложение для пользователей
-    #'blog',     # Приложение для контента
+    'blog',     # Приложение для контента
 
 ]
 
@@ -148,3 +148,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+def ensure_dir(directory):
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+ensure_dir(BASE_DIR / 'static')
+ensure_dir(BASE_DIR / 'media')
+ensure_dir(BASE_DIR / 'media' / 'avatars')

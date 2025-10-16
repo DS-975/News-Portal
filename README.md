@@ -18,7 +18,7 @@
 # Здесь файл manage.py, который является точкой входа для управления проектом.
 
 - - - 
-### Создание нового приложение core.
+### Создание нового приложение core / blog.
     py manage.py startapp core
 
 
@@ -127,7 +127,63 @@
     mkdir templates/users/profile.html
     mkdir templates/users/dashboard.html
 
-# Добавить в requirements.txt библиотеки проекта:
+
+### Создай основные папки
+    mkdir static
+    mkdir media
+    mkdir media\avatars
+    mkdir media\posts
+
+### Создаём папки (mkdir) и файлы (type nul > ) для приложения users
+    type nul > users\urls.py
+    type nul > users\forms.py
+
+### 🎨  ШАБЛОНЫ приложения users
+    mkdir users\templates
+    mkdir users\templates\users
+    type nul > users\templates\users\register.html     #  📄  Страница регистрации
+    type nul > users\templates\users\login.html        #  📄  Страница входа 
+    type nul > users\templates\users\profile.html      #  📄  Страница профиля 
+    type nul > users\templates\users\dashboard.html    #  📄  Личный кабинет
+
+### 🎨  СТАТИКА приложения users
+    mkdir users\static
+    mkdir users\static\users
+    mkdir users\static\users\css
+    type nul > users\static\users\css\users.css
+    mkdir users\static\users\js  
+    type nul > users\static\users\js\users.js
+    mkdir users\static\users\images
+
+- - -
+
+### Создаём папки (mkdir) и файлы (type nul > ) для приложения blog
+    type nul > blog\urls.py
+    type nul > blog\forms.py
+
+### 🎨  ШАБЛОНЫ приложения blog
+    mkdir blog\templates  
+    mkdir blog\templates\blog
+    type nul > blog\templates\blog\post_list.html    #  📄  Список статей
+    type nul > blog\templates\blog\post_detail.html  #  📄  Детали статьи
+    type nul > blog\templates\blog\news_list.html    #  📄  Список новостей
+    type nul > blog\templates\blog\create_post.html  #  📄  Создание статьи
+
+### 🎨  СТАТИКА приложения users
+    mkdir blog\static
+    mkdir blog\static\blog
+    mkdir blog\static\blog\css
+    type nul > blog\static\blog\css\blog.css
+    mkdir blog\static\blog\js
+    type nul > blog\static\blog\js\blog..js
+    mkdir blog\static\blog\images
+
+- - -
+
+### Удали базу данных
+    del db.sqlite3
+
+### Добавить в requirements.txt библиотеки проекта:
     pip freeze > requirements.txt
 
 ### Примерная архитектура проекта 
@@ -194,7 +250,7 @@
     0.0.3 - Cоздал приложение users и частично прописал атрибуты сущностей в README.md
     0.0.4 - Прописал модели в news_portal/users/models.py и прописал примерную архитектуру проекта в README.md
     0.0.5 - Настроил news_portal и установил Pillow - это библиотека для работы с изображениями в Python и создал папки в news_portal/users : static , static\users , static\users\css , static\users\js , static\users\images, добавил все беблиотеки в requirements.txt, создал и пременил миграции 
-
+    0.0.6 - Создал прилодение blog, создал папки templates, static и файлы urls.py и forms.py в blog и users, так же прописал быстрый способ по создание папок и файлов в них в README.md
 
 
 
